@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Twitter-like emoji starter template</title>
+  <link rel='stylesheet' href='https://cdn.materialdesignicons.com/4.0.96/css/materialdesignicons.min.css'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+
+<div class="container">
+  
+  <div class="row">
+    
+    <div class="col"></div>
+    <div class="col-6">
+      <form>
+        <div class="form-group">
+          <h5>Home</h5>
+          <hr>
+          <div class="fb">
+            <img id="avatar" src="https://robohash.org/eacupiditatenostrum.bmp?size=50x50&set=set1" alt="">
+            <div class="fb-column">
+           <textarea placeholder="What's happening?"class="form-control" id="textarea" rows="2"></textarea>
+            <div id="imgGifPoll"></div>
+            </div>
+          </div>
+          <div class="fb">
+            <section>
+              <div class="btn-group mr-2">
+                <input id="uploadPic" type="file" accept="image/png, image/jpeg, image/gif" class="btn btn-secondary mdi mdi-image-outline" aria-label="Insert image"></input>
+                <button id="gifbtn" type="button" class="btn btn-secondary mdi mdi-gif" aria-label="Insert gif" data-toggle="modal" data-target="#insertgif"></button>
+                <button type="button" class="btn btn-secondary mdi mdi-poll" aria-label="Insert Poll" style=""></button>
+                <button id="emojibtn" type="button" class="btn btn-secondary mdi mdi-emoticon-happy-outline" aria-label="Insert emoji" data-toggle="modal" data-target="#emojimodal"></button>
+              </div>
+            </section>
+            <button id="tweet" class="btn btn-primary" type="submit">Tweet</button>
+          </div>
+        </div>
+      </form>   
+    
+          
+    <!-- Small modal -->
+    <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true" id="emojimodal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <input type="text" id="searchEmoji" style="width: 270px" placeholder="Search emojis">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-header">
+            <div class="btn-group mr-2 emojimenu" id="emojiCategories">
+                <img src="https://abs-0.twimg.com/emoji/v2/svg/1f600.svg" alt="" data-category="Smileys">
+                <img src="https://abs-0.twimg.com/emoji/v2/svg/1f43b.svg" alt="" data-category="Animals">
+                <img src="https://abs-0.twimg.com/emoji/v2/svg/1f354.svg" alt="" data-category="Food">
+                <img src="https://abs-0.twimg.com/emoji/v2/svg/26bd.svg" alt="" data-category="Activities">
+                <img src="https://abs-0.twimg.com/emoji/v2/svg/1f698.svg" alt="" data-category="Travel">
+                <img src="https://abs-0.twimg.com/emoji/v2/svg/1f4a1.svg" alt="" data-category="Objects">
+                <img src="https://abs-0.twimg.com/emoji/v2/svg/1f523.svg" alt="" data-category="Symbols">
+                <img src="https://abs-0.twimg.com/emoji/v2/svg/1f6a9.svg" alt="" data-category="Flags">
+            </div>
+          </div>
+          <div class="modal-body" id="emojimodalbody">
+          </div>
+          <div class="modal-footer">
+          </div>
+        </div>
+      </div>
+    </div><!-- END MODAL -->
+      
+      <main>
+      </main>
+    </div>
+    <div class="col"></div>
+  </div>
+  
+</div>
+  
+</body>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
